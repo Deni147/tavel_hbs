@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{title}}</title>
+    <link rel='shortcut icon' href='favicon.png' type='image/png' />
+    <link rel='stylesheet' href='./css/style.css' />
+  </head>
+  <body style="background-color: rgb(25 51 25); color: white;">
+    {{!-- container start  --}}
+      {{!-- header --}}
+      {{> header}}
+      {{!-- main --}}
+      <main class='text-center'>
+        <div class='container'>
+          <h2>Layout - 2</h2>
+          <hr>
+          <h1>{{pageTitle}}</h1>
+          {{! main}}
+          {{{body}}}
+          <hr />
+          <p>(handlebars)</p>
+        </div>
+      </main>
+      {{!-- footer --}}
+      {{> footer}}
+      {{!-- container end  --}}
+    <script src='./js/script.js'></script>
+  </body>
+</html>

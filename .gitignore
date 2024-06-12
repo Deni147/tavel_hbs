@@ -1,0 +1,9 @@
+#extra
+_extra/
+# modules
+node_modules/
+# secrets
+.env
+# logs and other
+*.log
+.DS_Store
