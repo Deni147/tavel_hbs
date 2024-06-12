@@ -41,11 +41,16 @@ router.post('/', async (req, res) => {
   const data = await getDataFromMongoDB();
 
   const newObj = {
-    id: idIncrement(data),
+    // id: idIncrement(data),
     name: req.body.name,
     about: req.body.about,
     emoji: req.body.review_type,
   };
+
+  // Проверка наличия req.body.review_type
+if (!req.body.review_type) {
+  return res.status(400).send('Оберіть тип враження.');
+}
 
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).send('No files were uploaded.');
